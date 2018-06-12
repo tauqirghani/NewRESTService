@@ -1,0 +1,7 @@
+{
+    "records": [],
+    "resources": [{
+        "location": "Service Descriptors/newrestservice.module.Process-NewObject.json",
+        "type": "generated"
+    }]
+}

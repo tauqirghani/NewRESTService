@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_FfPlEG5OEeiLn4gHkURNhg" targetNamespace="http://tns.tibco.com/bw/composite/NewRESTService.module" name="NewRESTService.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_MDZOkG5OEeiLn4gHkURNhg" name="newobject" promote="ComponentProcess/newobject">
+    <sca:interface.wsdl xmi:id="_MDjmoG5OEeiLn4gHkURNhg" interface="http://xmlns.example.com/20180612103710PLT#wsdl.interface(newobject)" scaext:wsdlLocation="../Processes/newrestservice/module/Process.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_MDulwG5OEeiLn4gHkURNhg" name="RestService" path="/newobject" docBasePath="http://localhost:7777/NewRESTService.module" docResourcePath="NewObject" basePath="/" connector="newrestservice.module.NewObject" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/newrestservice.module.Process-NewObject.json">
+      <operation xmi:id="_MDzeQG5OEeiLn4gHkURNhg" operationName="get" nickname="get-newobject" httpMethod="GET" responseStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_ME64kG5OEeiLn4gHkURNhg"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_MD0FUG5OEeiLn4gHkURNhg" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_GJ32cG5OEeiLn4gHkURNhg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_GKEDsG5OEeiLn4gHkURNhg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_GKIVIG5OEeiLn4gHkURNhg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_GKNNoG5OEeiLn4gHkURNhg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_GKSGIG5OEeiLn4gHkURNhg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_GKWXkG5OEeiLn4gHkURNhg" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_GKapAG5OEeiLn4gHkURNhg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_F3o28G5OEeiLn4gHkURNhg" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_F3qFEG5OEeiLn4gHkURNhg" processName="newrestservice.module.Process"/>
+    <sca:service xmi:id="_MDTH8G5OEeiLn4gHkURNhg" name="newobject">
+      <sca:interface.wsdl xmi:id="_MDU9IG5OEeiLn4gHkURNhg" interface="http://xmlns.example.com/20180612103710PLT#wsdl.interface(newobject)" scaext:wsdlLocation="../Processes/newrestservice/module/Process.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
